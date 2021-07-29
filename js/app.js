@@ -32,27 +32,23 @@ function handleSubmit (evt) {
 
     const specialAmount = Number(specialAmountInputEl.value);
     if (Number.isNaN(specialAmount)) {
-        // TODO: show error
         specialAmountErrorEl.textContent = 'Неверное значение. Введите число, например 10000';
         return;
     }
-    if (!Number.isFinite(specialAmount)) {
-        // TODO: show error
+    /*if (!Number.isFinite(specialAmount)) {
         specialAmountErrorEl.textContent = 'Слишком большое значение. Введите число, например: 10000';
         return;
-    }
+    } */
 
     const otherAmount = Number(otherAmountInputEl.value);
     if (Number.isNaN(otherAmount)) {
-        // TODO: show error
         otherAmountErrorEl.textContent = 'Неверное значение. Введите число, например 10000';
         return;
     }
-    if (!Number.isFinite(otherAmount)) {
-        // TODO: show error
+    /*if (!Number.isFinite(otherAmount)) {
         otherAmountErrorEl.textContent = 'Неверное значение. Введите число, например 10000';
         return;
-    }
+    }*/
 
     const result = calculateCashback(specialAmount, otherAmount);
     specialCashbackEl.textContent = `${result.specialCategoryCashback} руб.`;
